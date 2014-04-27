@@ -1,0 +1,7 @@
+source("cachematrix.R")
+c=rbind(c(1, -1/4), c(-1/4, 1))
+c2 = replicate(2000, rnorm(2000)) 
+class(c2)
+t <- makeCacheMatrix(c2)
+system.time(cacheSolve(t))
+system.time(cacheSolve(t))
